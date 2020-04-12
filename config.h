@@ -9,7 +9,7 @@ static char *font = "Fira Mono:style=Bold:pixelsize=12:antialias=true:autohint=t
 //static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 //static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static int borderpx = 2;
+static int borderpx = 50;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -18,7 +18,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
