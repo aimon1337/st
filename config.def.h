@@ -9,7 +9,7 @@ static char *font = "Fira Mono:style=Bold:pixelsize=12:antialias=true:autohint=t
 //static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 //static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static int borderpx = 10;
+static int borderpx = 30;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -213,8 +213,8 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
+	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
@@ -238,8 +238,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ XK_NO_MOD,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ XK_NO_MOD,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
