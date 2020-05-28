@@ -5,8 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mononoki Nerd Font:size=11:antialias=true:autohint=true";
-//static char *font = "Fira Mono:style=Bold:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Fira Mono:style=Bold:pixelsize=12:antialias=true:autohint=true";
 //static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 //static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
