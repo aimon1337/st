@@ -44,8 +44,8 @@ static unsigned int tripleclicktimeout = 600;
 int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+static unsigned int xfps = 60;
+static unsigned int actionfps = 60;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -99,30 +99,37 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#1c1e22",
+	"#e56f92",
+	"#8cd7aa",
+	"#e9967e",
+	"#79aaeb",
+	"#c488ec",
+	"#7abce4",
+	"#a6a9b7",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#484e5b",
+	"#e56f92",
+	"#8cd7aa",
+	"#e9967e",
+	"#79aaeb",
+	"#c488ec",
+	"#7abce4",
+	"#daddee",
 
-	[255] = 0,
+	"#79aaeb",
+	"#c488ec",
+	"#ffffff",
+
+	[231] = "#ffffff",
+	[232] = "#080808",
+
+	[255] = "#232731",
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#18191c",
+	"#daddee",
 };
 
 
@@ -130,9 +137,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -193,8 +200,8 @@ ResourcePref resources[] = {
 		{ "color14",      STRING,  &colorname[14] },
 		{ "color15",      STRING,  &colorname[15] },
 		{ "background",   STRING,  &colorname[256] },
-		{ "foreground",   STRING,  &colorname[256] },
-		{ "cursorColor",  STRING,  &colorname[256] },
+		{ "foreground",   STRING,  &colorname[257] },
+		{ "cursorColor",  STRING,  &colorname[258] },
 		{ "termname",     STRING,  &termname },
 		{ "shell",        STRING,  &shell },
 		{ "xfps",         INTEGER, &xfps },
